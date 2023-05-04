@@ -1,0 +1,32 @@
+@import "config";
+
+div.navbar {
+  width: 450px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    margin: 71px 0 0 114px;
+    gap: 60px;
+    width: 442px;
+    height: 19px;
+    list-style: none;
+
+    a.menu-item {
+      text-decoration: none;
+      font: $font-main;
+      color: $tertiary-color;
+      padding: 8px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      transition: 1s;
+
+      &:hover,
+      &.hovered {
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "navbar.scss";
+@import "config.scss";
+@import "mixins.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+}
