@@ -1,0 +1,16 @@
+button {
+  box-sizing: border-box;
+  padding: 15px 15px;
+  width: 146px;
+  height: 49px;
+  background: rgba(31, 66, 250, 0.26);
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+
+  .button-text {
+    width: 86px;
+    font: $font-main;
+    line-height: 19px;
+    color: $tertiary-color;
+  }
+}

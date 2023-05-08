@@ -1,0 +1,48 @@
+@import "config";
+
+.hero {
+  width: 75%;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 65px;
+}
+
+.hero-text-header {
+  font: $font-header;
+  font-size: 45px;
+  color: $tertiary-color;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 25px 0;
+  width: 556px;
+  line-height: 60px;
+}
+
+.hero-text-content {
+  font: $font-main;
+  font-size: 18px;
+  color: $tertiary-color;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    width: 50%;
+    padding-top: 150px;
+    margin-left: 98px;
+    gap: 50px;
+  }
+  .hero-text-header {
+    font: $font-header;
+    line-height: 70px;
+  }
+
+  .hero-text-content {
+    width: 440px;
+  }
+}

@@ -11,6 +11,14 @@ function handleMouseLeave(e) {
 export default function Navbar() {
   return (
     <div className="navbar">
+      <div class="mobileitems">
+        <a href="#" class="burger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      </div>
+
       <ul className="sections">
         <li>
           <a
@@ -45,7 +53,7 @@ export default function Navbar() {
         <li>
           <a
             href="#"
-            className="menu-item"
+            className="menu-item blog"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >

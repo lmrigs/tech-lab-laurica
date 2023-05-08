@@ -1,32 +1,80 @@
 @import "config";
 
-div.navbar {
-  width: 450px;
+.navbar {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+}
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    margin: 71px 0 0 114px;
-    gap: 60px;
-    width: 442px;
-    height: 19px;
-    list-style: none;
+ul {
+  display: none;
+}
 
-    a.menu-item {
-      text-decoration: none;
-      font: $font-main;
-      color: $tertiary-color;
-      padding: 8px 20px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0);
-      transition: 1s;
+div.mobileitems {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
 
-      &:hover,
-      &.hovered {
-        border: 1.5px solid rgba(255, 255, 255, 0.4);
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 25px;
+  padding-right: 30px;
+}
+
+a.burger span.bar {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: $tertiary-color;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.mobileitems {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .navbar {
+    height: 80px;
+
+    ul.sections {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 35px;
+      padding: 0;
+      margin: 50px 0 0 80px;
+      list-style: none;
+
+      a.menu-item {
+        text-decoration: none;
+        font: $font-main;
+        color: $tertiary-color;
+        padding: 8px 20px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0);
+        transition: 1s;
+
+        &:hover,
+        &.hovered {
+          border: 1.5px solid rgba(255, 255, 255, 0.4);
+        }
       }
     }
+  }
+  .blog {
+    display: none;
   }
 }
