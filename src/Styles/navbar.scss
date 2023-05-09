@@ -1,17 +1,51 @@
 @import "config";
+@import "mixins";
 
 .navbar {
   height: 70px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
 }
 
-ul {
+.navbar-links {
+  width: 100%;
   display: none;
+  background-color: $primary-color;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+ul.sections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding-top: 20px;
+  list-style: none;
+  padding-inline-start: 0;
+
+  a.menu-item {
+    text-decoration: none;
+    font: $font-main;
+    color: $tertiary-color;
+    padding: 8px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
 }
 
 div.mobileitems {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -28,12 +62,46 @@ div.mobileitems {
   padding-right: 30px;
 }
 
-a.burger span.bar {
+.burger span {
   display: block;
   height: 3px;
   width: 100%;
   background-color: $tertiary-color;
   border-radius: 5px;
+}
+
+.burger-icon {
+  display: block;
+  width: 40px;
+  height: 25px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 6px;
+}
+
+.burger-icon span:first-child {
+  top: 0;
+}
+
+.burger-icon span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-icon span:last-child {
+  bottom: 0;
+}
+
+.burger-icon.open span:first-child {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.burger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(3px, -3px);
 }
 
 @media only screen and (min-width: 768px) {
@@ -45,6 +113,9 @@ a.burger span.bar {
     display: none;
   }
 
+  .navbar-links {
+    display: block;
+  }
   .navbar {
     height: 80px;
 
@@ -74,7 +145,15 @@ a.burger span.bar {
       }
     }
   }
-  .blog {
-    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    height: 90px;
+
+    ul.sections {
+      gap: 45px;
+      margin-left: 100px;
+    }
   }
 }
