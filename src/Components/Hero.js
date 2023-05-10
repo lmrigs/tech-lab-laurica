@@ -1,7 +1,7 @@
-import "../Styles/textContentDiv.scss";
-import Button from "./button.js";
+import "../Styles/Hero.scss";
+import Button from "./Button.js";
 
-export default function HeroContent() {
+export function HeroText() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
@@ -12,6 +12,19 @@ export default function HeroContent() {
         online. Join the digital revolution. Take your business online with us.
       </p>
       <Button className="get-started" text="Get Started" />
+    </div>
+  );
+}
+
+export function Animation() {
+  return <div className="spline"></div>;
+}
+
+export default function Hero() {
+  return (
+    <div className="container">
+      <HeroText />
+      <Animation />
     </div>
   );
 }

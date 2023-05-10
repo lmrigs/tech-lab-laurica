@@ -1,4 +1,4 @@
-import "../Styles/navbar.scss";
+import "../Styles/Button.scss";
 
 export default function Button({ text }) {
   return (
