@@ -1,5 +1,6 @@
 import "../Styles/Hero.scss";
 import Button from "./Button.js";
+import Spline from "@splinetool/react-spline";
 
 export function HeroText() {
   return (
@@ -17,7 +18,9 @@ export function HeroText() {
 }
 
 export function Animation() {
-  return <div className="spline"></div>;
+  return (
+    <Spline scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode" />
+  );
 }
 
 export default function Hero() {
