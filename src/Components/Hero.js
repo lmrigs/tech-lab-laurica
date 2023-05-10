@@ -19,7 +19,10 @@ export function HeroText() {
 
 export function Animation() {
   return (
-    <Spline scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode" />
+    <Spline
+      className="spline"
+      scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
+    />
   );
 }
 
