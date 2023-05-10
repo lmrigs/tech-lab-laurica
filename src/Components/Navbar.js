@@ -53,6 +53,16 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
+              Services
+            </a>
+          </li>
+          <li onClick={handleListClick}>
+            <a
+              href="#"
+              className="menu-item"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               About
             </a>
           </li>
