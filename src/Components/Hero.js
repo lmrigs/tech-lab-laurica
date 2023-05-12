@@ -6,7 +6,7 @@ export function HeroText() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
-        Empower your business with a website.
+        Empower your business with <br></br>a website.
       </h1>
       <p className="hero-text-content">
         Reach your audience, boost your sales. Your business deserves to be seen
@@ -17,20 +17,20 @@ export function HeroText() {
   );
 }
 
-export function Animation() {
-  return (
-    <Spline
-      className="spline"
-      scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
-    />
-  );
-}
+// export function Animation() {
+//   return (
+//     <Spline
+//       className="spline"
+//       scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
+//     />
+//   );
+// }
 
 export default function Hero() {
   return (
     <div className="container">
       <HeroText />
-      <Animation />
+      {/* <Animation /> */}
     </div>
   );
 }

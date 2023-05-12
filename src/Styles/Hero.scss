@@ -1,17 +1,25 @@
 @import "Config";
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 30px;
+  padding-top: 95px;
+  box-sizing: border-box;
+
   .hero {
     position: relative;
-    width: 85vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 65px;
+    gap: 20px;
     margin: 0 0 40px 20px;
 
     .hero-text-header {
-      font: $font-header;
+      font-family: $font-header;
       font-size: 40px;
       color: $tertiary-color;
       text-align: left;
@@ -20,9 +28,10 @@
     }
 
     .hero-text-content {
-      font: $font-main;
+      font-family: $font-main;
       color: $tertiary-color;
       text-align: left;
+      width: 80%;
       padding: 0;
       margin: 0 0 28px 0;
     }
@@ -34,37 +43,32 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero {
-    width: 50%;
-    padding-top: 150px;
-    margin-left: 98px;
-    gap: 50px;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    .hero-text-header {
-      font: $font-header;
-      line-height: 70px;
+    .hero {
+      width: 40%;
+      padding-left: 40px;
+      gap: 25px;
+      margin: 0;
+
+      .hero-text-header {
+        width: 100%;
+        font-family: $font-header;
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      .hero-text-content {
+        width: 80%;
+      }
     }
 
-    .hero-text-content {
-      width: 440px;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .hero {
-    width: 35%;
-    gap: 20px;
-    margin-left: 80px;
-
-    .hero-text-header {
-      width: 100%;
-      font-size: 30px;
-      line-height: 30px;
-    }
-
-    .hero-text-content {
-      width: 100%;
+    .spline {
+      width: 50%;
     }
   }
 }
@@ -81,12 +85,12 @@
 
       .hero-text-header {
         width: 100%;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 70px;
+        line-height: 70px;
       }
 
       .hero-text-content {
-        width: 100%;
+        width: 60%;
       }
     }
 

@@ -1,0 +1,64 @@
+@import "Config";
+@import "Mixins";
+
+div.about-us {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.about-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+div.about-text {
+  width: 90%;
+  background-color: #1d203e;
+
+  p {
+    color: $tertiary-color;
+    font-family: $font-header;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+div.about-icon {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
+  svg {
+    width: 90% !important;
+  }
+}
+
+h2.section-header {
+  @include section-header;
+}
+
+@media only screen and (min-width: 768px) {
+  div.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    div.about-text {
+      width: 90%;
+      margin-left: 150px;
+      padding: 20px;
+    }
+
+    div.about-icon {
+      width: 80%;
+    }
+  }
+}
