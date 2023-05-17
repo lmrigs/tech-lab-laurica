@@ -6,6 +6,10 @@ div.about-us {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2.section-header {
+    @include section-header;
+  }
 }
 
 div.about-container {
@@ -34,31 +38,67 @@ div.about-icon {
   margin: auto;
   text-align: center;
 
-  svg {
-    width: 90% !important;
+  img {
+    width: 100%;
   }
-}
-
-h2.section-header {
-  @include section-header;
 }
 
 @media only screen and (min-width: 768px) {
   div.about-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
 
     div.about-text {
-      width: 90%;
-      margin-left: 150px;
+      width: 100%;
+      margin-left: 50px;
       padding: 20px;
     }
 
     div.about-icon {
       width: 80%;
     }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  div.about-us {
+    padding-top: 100px;
+  }
+
+  div.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 40px;
+
+    div.about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      height: 380px;
+      margin-left: 70px;
+      padding: 25px;
+
+      p {
+        width: 95%;
+        font-size: 18px;
+      }
+    }
+
+    div.about-icon {
+      width: 410px;
+      height: 410px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  h2.section-header {
+    margin-bottom: 100px;
   }
 }

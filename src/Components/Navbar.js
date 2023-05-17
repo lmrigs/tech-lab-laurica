@@ -38,7 +38,7 @@ export default function Navbar() {
         <ul className="sections">
           <li onClick={handleListClick}>
             <a
-              href="#"
+              href="#content"
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -48,7 +48,7 @@ export default function Navbar() {
           </li>
           <li onClick={handleListClick}>
             <a
-              href="#"
+              href="#services"
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -58,7 +58,7 @@ export default function Navbar() {
           </li>
           <li onClick={handleListClick}>
             <a
-              href="#"
+              href="#about"
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -68,7 +68,7 @@ export default function Navbar() {
           </li>
           <li onClick={handleListClick}>
             <a
-              href="#"
+              href="#contact"
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}

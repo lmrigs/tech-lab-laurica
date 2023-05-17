@@ -6,7 +6,7 @@ export function HeroText() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
-        Empower your business with <br></br>a website.
+        Empower your <br></br>business with <br></br>a website.
       </h1>
       <p className="hero-text-content">
         Reach your audience, boost your sales. Your business deserves to be seen
