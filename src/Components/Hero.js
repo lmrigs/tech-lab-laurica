@@ -17,20 +17,20 @@ export function HeroText() {
   );
 }
 
-// export function Animation() {
-//   return (
-//     <Spline
-//       className="spline"
-//       scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
-//     />
-//   );
-// }
+export function Animation() {
+  return (
+    <Spline
+      className="spline"
+      scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
+    />
+  );
+}
 
 export default function Hero() {
   return (
     <div className="container">
       <HeroText />
-      {/* <Animation /> */}
+      <Animation />
     </div>
   );
 }

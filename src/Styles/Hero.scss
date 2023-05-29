@@ -1,5 +1,10 @@
 @import "Config";
 
+.content {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -39,6 +44,7 @@
 
   .spline {
     position: absolute;
+    display: none;
   }
 }
 
@@ -66,10 +72,6 @@
         width: 90%;
       }
     }
-
-    .spline {
-      width: 50%;
-    }
   }
 }
 
@@ -77,16 +79,17 @@
   .container {
     display: flex;
     flex-direction: row;
+    margin: 0 auto 30px;
 
     .hero {
-      width: 60%;
+      width: 50%;
       gap: 30px;
-      margin: 30px 0 50px 75px;
+      margin: 0;
 
       .hero-text-header {
         width: 80%;
-        font-size: 70px;
-        line-height: 70px;
+        font-size: 50px;
+        line-height: 50px;
       }
 
       .hero-text-content {
@@ -95,33 +98,68 @@
     }
 
     .spline {
-      transform: scale(1) translateX(0px) translateY(90px);
-      width: 50% !important;
+      display: block;
+      height: 656px !important;
+      transform: scale(0.6) translateX(368px) translateY(68px);
       right: 0;
     }
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .hero {
-    width: 47%;
-    gap: 50px;
-    margin-left: 110px;
+@media only screen and (min-width: 1440px) {
+  .container {
+    .hero {
+      width: 47%;
+      gap: 50px;
+      padding-left: 0;
+      margin-left: 70px;
 
-    .hero-text-header {
-      width: 80%;
-      font-size: 70px;
-      line-height: 70px;
+      .hero-text-header {
+        width: 80%;
+        font-size: 70px;
+        line-height: 70px;
+      }
+
+      .hero-text-content {
+        width: 80%;
+      }
     }
 
-    .hero-text-content {
-      width: 80%;
+    .spline {
+      display: block;
+      height: 700px !important;
+      transform: scale(0.8) translateX(368px) translateY(51px);
+      right: 0;
     }
   }
 }
 
 @media (min-width: 1920px) {
-  .container {
-    padding: 150px 0;
+  .content {
+    height: 100vh;
+
+    .container {
+      padding: 100px 0 0 0;
+
+      .hero {
+        gap: 50px;
+
+        .hero-text-header {
+          font-size: 90px;
+          line-height: 90px;
+        }
+
+        .hero-text-content {
+          font-size: 35px;
+        }
+      }
+
+      .spline {
+        display: block;
+        height: 800px !important;
+        transform: scale(1) translateX(463px) translateY(51px);
+        right: 0;
+      }
+    }
   }
 }

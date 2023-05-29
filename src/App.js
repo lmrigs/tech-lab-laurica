@@ -8,17 +8,17 @@ import Contact from "./Components/Contact";
 function App() {
   return (
     <>
-      <div className="content" id="content">
+      <div className="content" name="content">
         <Navbar />
         <Hero />
       </div>
-      <div className="services" id="services">
+      <div className="services" name="services">
         <Services />
       </div>
-      <div className="about-us" id="about">
+      <div className="about-us" name="about">
         <About />
       </div>
-      <div className="contact" id="contact">
+      <div className="contact" name="contact">
         <Contact />
       </div>
     </>

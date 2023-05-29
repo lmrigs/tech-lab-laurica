@@ -1,19 +1,19 @@
 @import "Config";
 @import "Mixins";
 
-div.contact {
+.contact {
   box-sizing: border-box;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  h2.section-header {
+  .section-header {
     @include section-header;
   }
 }
 
-div.container-contact {
+.container-contact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,7 +30,7 @@ div.container-contact {
   );
   border-image-slice: 1;
 }
-div.contact-info {
+.contact-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +46,7 @@ form {
   gap: 10px;
 }
 
-div.contact-info::after {
+.contact-info::after {
   content: "";
   display: block;
   height: 2px;
@@ -69,15 +69,15 @@ h3 {
   margin: 0 auto;
 }
 
-div.phone,
-div.email {
+.phone,
+.email {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 30px;
 }
 
-div.contact-form {
+.contact-form {
   width: 100%;
 }
 
@@ -125,17 +125,17 @@ textarea:focus {
 }
 
 @media only screen and (min-width: 768px) {
-  div.phone,
-  div.email {
+  .phone,
+  .email {
     margin-left: 200px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  div.contact {
+  .contact {
     padding-top: 50px;
   }
-  div.container-contact {
+  .container-contact {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,7 +145,7 @@ textarea:focus {
     height: 475px;
   }
 
-  div.contact-info {
+  .contact-info {
     width: 45%;
     gap: 40px;
     padding-bottom: 120px;
@@ -154,13 +154,13 @@ textarea:focus {
       text-align: left;
     }
 
-    div.phone,
-    div.email {
+    .phone,
+    .email {
       margin-left: 80px;
     }
   }
 
-  div.contact-info::after {
+  .contact-info::after {
     display: none;
   }
 
@@ -176,7 +176,7 @@ textarea:focus {
     );
   }
 
-  div.contact-form {
+  .contact-form {
     width: 50%;
 
     form {
@@ -203,7 +203,9 @@ textarea:focus {
 }
 
 @media (min-width: 1920px) {
-  div.contact {
-    margin-bottom: 100px;
+  .contact {
+    height: 100vh;
+    margin: 0;
+    padding-top: 0;
   }
 }

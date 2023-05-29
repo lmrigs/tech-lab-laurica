@@ -1,5 +1,6 @@
 import "../Styles/Navbar.scss";
 import { useState } from "react";
+import { Link, Element } from "react-scroll";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,45 +37,69 @@ export default function Navbar() {
 
       <div className={`navbar-links ${isVisible ? "visible" : ""}`}>
         <ul className="sections">
-          <li onClick={handleListClick}>
-            <a
-              href="#content"
+          <li>
+            <Link
+              onClick={handleListClick}
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              activeClass="active"
+              to="content"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
               TechLab
-            </a>
+            </Link>
           </li>
-          <li onClick={handleListClick}>
-            <a
-              href="#services"
+          <li>
+            <Link
+              onClick={handleListClick}
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              activeClass="active"
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
               Services
-            </a>
+            </Link>
           </li>
-          <li onClick={handleListClick}>
-            <a
-              href="#about"
+          <li>
+            <Link
+              onClick={handleListClick}
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
               About
-            </a>
+            </Link>
           </li>
-          <li onClick={handleListClick}>
-            <a
-              href="#contact"
+          <li>
+            <Link
+              onClick={handleListClick}
               className="menu-item"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
