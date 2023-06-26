@@ -1,28 +1,60 @@
 import "../Styles/Hero.scss";
-import Button from "./Button.js";
 import Spline from "@splinetool/react-spline";
+import { useState, useEffect } from "react";
+import Loader from "../Images/Loading Carga.gif";
 
 export function HeroText() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
-        Empower your <br></br>business with <br></br>a website.
+        Empower your <br />
+        business with <br />a website.
       </h1>
       <p className="hero-text-content">
         Reach your audience, boost your sales. Your business deserves to be seen
         online. Join the digital revolution. Take your business online with us.
       </p>
-      <Button className="get-started" text="Get Started" />
     </div>
   );
 }
 
 export function Animation() {
+  const [canvasLoaded, setCanvasLoaded] = useState(false);
+
+  useEffect(() => {
+    const canvasElement = document.querySelector(".spline canvas");
+    if (canvasElement) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === "style") {
+            const { display, width, height } = mutation.target.style;
+            const isCanvasLoaded =
+              display === "block" && width === "100%" && height === "100%";
+
+            if (isCanvasLoaded) {
+              setCanvasLoaded(true);
+              observer.disconnect();
+            }
+          }
+        });
+      });
+
+      observer.observe(canvasElement, { attributes: true });
+    }
+  }, []);
+
   return (
-    <Spline
-      className="spline"
-      scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
-    />
+    <div className="loading-animation">
+      <div className={`loading-overlay ${canvasLoaded ? "hidden" : ""}`}>
+        <img src={Loader} alt="My Image" />
+      </div>
+
+      {/* Your Spline component */}
+      <Spline
+        className="spline"
+        scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
+      />
+    </div>
   );
 }
 

@@ -9,13 +9,35 @@
 
 html,
 body,
-#root,
-.content {
+#root {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: $primary-color;
   position: relative;
-  max-width: 100vw;
   overflow-x: hidden;
+}
+
+.content {
+  height: 100vh;
+}
+
+.loading-screen {
+  display: block;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+
+  div {
+    margin: auto;
+    padding-top: 200px;
+  }
+
+  .hide-loading {
+    display: none;
+  }
 }
