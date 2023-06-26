@@ -1,7 +1,7 @@
 import "../Styles/Hero.scss";
 import Spline from "@splinetool/react-spline";
 import { useState, useEffect } from "react";
-import Loader from "../Images/loading_animation.gif";
+import Loader from "../Images/loading_bubbles.gif";
 
 export function HeroText() {
   return (
