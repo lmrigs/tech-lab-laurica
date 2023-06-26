@@ -26,7 +26,12 @@ export function Animation() {
     if (canvasElement) {
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          if (mutation.attributeName === "style") {
+          if (
+            mutation.attributeName === "style" ||
+            mutation.attributeName === "display" ||
+            mutation.attributeName === "width" ||
+            mutation.attributeName === "height"
+          ) {
             const { display, width, height } = mutation.target.style;
             const isCanvasLoaded =
               display === "block" && width === "100%" && height === "100%";
@@ -38,7 +43,6 @@ export function Animation() {
           }
         });
       });
-
       observer.observe(canvasElement, { attributes: true });
     }
   }, []);
