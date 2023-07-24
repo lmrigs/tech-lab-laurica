@@ -15,15 +15,30 @@
 
   .hero-text-header {
     font-family: $font-header;
-    font-size: 45px;
+    font-size: 48px;
     color: $tertiary-color;
     text-align: left;
     padding: 0;
     margin-bottom: 25px;
+
+    .title-gradient {
+      background-image: linear-gradient(
+        200deg,
+        #08b6f9,
+        #6c56ef,
+        #aa0eb2,
+        #1306dd
+      );
+
+      background-clip: text;
+
+      color: transparent;
+    }
   }
 
   .hero-text-content {
     font-family: $font-main;
+    font-size: 18px;
     color: $tertiary-color;
     text-align: left;
     width: 80%;
@@ -56,81 +71,72 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .hero {
+    width: 80%;
+    padding: 0;
+    gap: 75px;
+    margin: 100px auto 50px;
 
-    .hero {
-      width: 80%;
-      padding-left: 60px;
-      gap: 75px;
-      margin-top: 100px;
+    .hero-text-header {
+      width: 100%;
+      font-family: $font-header;
+      font-size: 60px;
+      line-height: 55px;
+      text-align: left;
+    }
 
-      .hero-text-header {
-        width: 100%;
-        font-family: $font-header;
-        font-size: 60px;
-        line-height: 55px;
-      }
-
-      .hero-text-content {
-        width: 80%;
-        font-size: 23px;
-      }
+    .hero-text-content {
+      width: 100%;
+      font-size: 23px;
+      text-align: left;
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .container {
+  .hero {
     display: flex;
-    flex-direction: row;
-    margin: 100px auto 30px;
+    flex-direction: column;
 
-    .hero {
-      width: 50%;
-      gap: 50px;
-      margin: 0;
-
-      .hero-text-header {
-        width: 80%;
-        font-size: 50px;
-        line-height: 50px;
-      }
-
-      .hero-text-content {
-        width: 60%;
-      }
+    .hero-text-header {
+      width: 80%;
+      font-size: 50px;
+      line-height: 50px;
     }
 
-    // .spline {
-    //   display: block;
-    //   height: 850px !important;
-    //   transform: scale(0.6) translateX(368px) translateY(68px);
-    //   right: 0;
-    // }
+    .hero-text-content {
+      width: 90%;
+    }
   }
+
+  // .spline {
+  //   display: block;
+  //   height: 850px !important;
+  //   transform: scale(0.6) translateX(368px) translateY(68px);
+  //   right: 0;
+  // }
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    .hero {
-      width: 47%;
-      gap: 50px;
-      padding-left: 0;
-      margin-left: 70px;
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    margin: 0 auto 50px;
 
-      .hero-text-header {
-        width: 80%;
-        font-size: 70px;
-        line-height: 70px;
-      }
+    .hero-text-header {
+      width: 90%;
+      font-size: 80px;
+      line-height: 80px;
+    }
 
-      .hero-text-content {
-        width: 70%;
-      }
+    .hero-text-content {
+      width: 60%;
+      font-size: 22px;
+      text-align: right;
+      padding-top: 25px;
     }
 
     // .spline {
@@ -142,32 +148,27 @@
   }
 }
 
-@media (min-width: 1920px) {
-  .content {
-    height: 100vh;
+@media only screen and (min-width: 1800px) {
+  .hero {
+    gap: 50px;
+    padding-top: 200px;
 
-    .container {
-      padding: 100px 0 0 0;
+    .hero-text-header {
+      width: 100%;
+      font-size: 95px;
+      line-height: 95px;
+    }
 
-      .hero {
-        gap: 50px;
-
-        .hero-text-header {
-          font-size: 90px;
-          line-height: 90px;
-        }
-
-        .hero-text-content {
-          font-size: 35px;
-        }
-      }
-
-      // .spline {
-      //   display: block;
-
-      //   transform: scale(1) translateX(463px) translateY(51px);
-      //   right: 0;
-      // }
+    .hero-text-content {
+      width: 80%;
+      font-size: 33px;
     }
   }
+
+  // .spline {
+  //   display: block;
+
+  //   transform: scale(1) translateX(463px) translateY(51px);
+  //   right: 0;
+  // }
 }

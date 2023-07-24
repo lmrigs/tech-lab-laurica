@@ -20,24 +20,30 @@ body,
 
 .content {
   height: 100vh;
+  margin-bottom: 100px;
 }
 
-.loading-screen {
-  display: block;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
+.gradient-line {
+  position: relative;
+  border: none;
+  height: 2px;
+  width: 80%;
+  background-image: linear-gradient(200deg, #08b6f9, #6c56ef, #aa0eb2, #1306dd);
+}
+
+.gradient-line::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $primary-color;
+  height: 2px;
+  background-image: inherit;
+}
 
-  div {
-    margin: auto;
-    padding-top: 200px;
-  }
-
-  .hide-loading {
-    display: none;
+@media only screen and (min-width: 1024px) {
+  .content {
+    margin: 0;
   }
 }

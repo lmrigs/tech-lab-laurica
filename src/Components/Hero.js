@@ -7,12 +7,13 @@ export default function Hero() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
-        Empower your <br />
-        business with <br />a website.
+        <span className="title-gradient">Empower</span> your <br />
+        business with <br />a <span className="title-gradient">website</span>.
       </h1>
       <p className="hero-text-content">
-        Reach your audience, boost your sales. Your business deserves to be seen
-        online. Join the digital revolution. Take your business online with us.
+        Reach your audience, boost your sales. <br></br>Your business deserves
+        to be seen online. <br></br>Join the digital revolution. <br></br>Take
+        your business online with us.
       </p>
     </div>
   );
