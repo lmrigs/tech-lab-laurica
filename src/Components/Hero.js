@@ -1,72 +1,69 @@
 import "../Styles/Hero.scss";
-import Spline from "@splinetool/react-spline";
-import { useState, useEffect } from "react";
-import Loader from "../Images/loading_bubbles.gif";
+// import Spline from "@splinetool/react-spline";
+// import { useState, useEffect } from "react";
+// import Loader from "../Images/loading_bubbles.gif";
 
-export function HeroText() {
+export default function Hero() {
   return (
     <div className="hero">
       <h1 className="hero-text-header">
-        Empower your <br />
-        business with <br />a website.
+        <span className="title-gradient">Empower</span> your <br />
+        business with <br />a <span className="title-gradient">website</span>.
       </h1>
       <p className="hero-text-content">
-        Reach your audience, boost your sales. Your business deserves to be seen
-        online. Join the digital revolution. Take your business online with us.
+        Reach your audience, boost your sales. <br></br>Your business deserves
+        to be seen online. <br></br>Join the digital revolution. <br></br>Take
+        your business online with us.
       </p>
     </div>
   );
 }
 
-export function Animation() {
-  const [canvasLoaded, setCanvasLoaded] = useState(false);
+// export function Animation() {
+//   const [canvasLoaded, setCanvasLoaded] = useState(false);
 
-  useEffect(() => {
-    const canvasElement = document.querySelector(".spline canvas");
-    if (canvasElement) {
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (
-            mutation.attributeName === "style" ||
-            mutation.attributeName === "display" ||
-            mutation.attributeName === "width" ||
-            mutation.attributeName === "height"
-          ) {
-            const { display, width, height } = mutation.target.style;
-            const isCanvasLoaded =
-              display === "block" && width === "100%" && height === "100%";
+//   useEffect(() => {
+//     const canvasElement = document.querySelector(".spline canvas");
+//     if (canvasElement) {
+//       const observer = new MutationObserver((mutations) => {
+//         mutations.forEach((mutation) => {
+//           if (mutation.attributeName === "style") {
+//             const { display, width, height } = mutation.target.style;
+//             const isCanvasLoaded =
+//               display === "block" && width === "100%" && height === "100%";
 
-            if (isCanvasLoaded) {
-              setCanvasLoaded(true);
-              observer.disconnect();
-            }
-          }
-        });
-      });
-      observer.observe(canvasElement, { attributes: true });
-    }
-  }, []);
+//             if (isCanvasLoaded) {
+//               setCanvasLoaded(true);
+//               observer.disconnect();
+//             }
+//           }
+//         });
+//       });
 
-  return (
-    <div className="loading-animation">
-      <div className={`loading-overlay ${canvasLoaded ? "hidden" : ""}`}>
-        <img src={Loader} alt="My Image" />
-      </div>
+//       observer.observe(canvasElement, { attributes: true });
+//     }
+//   }, []);
 
-      {/* Your Spline component */}
-      <Spline
-        className="spline"
-        scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
-      />
-    </div>
-  );
-}
+//   return (
+//     <div className="loading-animation">
+//       <div className={`loading-overlay ${canvasLoaded ? "hidden" : ""}`}>
+//         <img src={Loader} alt="My Image" />
+//       </div>
 
-export default function Hero() {
-  return (
-    <div className="container">
-      <HeroText />
-      <Animation />
-    </div>
-  );
-}
+//       {/* Your Spline component */}
+//       <Spline
+//         className="spline"
+//         scene="https://prod.spline.design/eZG7X-ABMmstzH9n/scene.splinecode"
+//       />
+//     </div>
+//   );
+// }
+
+// export default function Hero() {
+//   return (
+//     <div className="container">
+//       <HeroText />
+//       <Animation />
+//     </div>
+//   );
+// }

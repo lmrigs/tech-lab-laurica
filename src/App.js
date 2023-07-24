@@ -11,6 +11,7 @@ function App() {
       <div className="content" name="content">
         <Navbar />
         <Hero />
+        <hr className="gradient-line"></hr>
       </div>
       <div className="services" name="services">
         <Services />
